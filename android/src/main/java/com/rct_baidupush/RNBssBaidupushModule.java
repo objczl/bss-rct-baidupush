@@ -1,7 +1,6 @@
 
 package com.rct_baidupush;
 
-import android.support.annotation.Nullable;
 import android.util.Log;
 
 import com.baidu.android.pushservice.PushConstants;
@@ -66,7 +65,7 @@ public class RNBssBaidupushModule extends ReactContextBaseJavaModule {
   }
   private void sendEvent(ReactContext reactContext,
                          String eventName,
-                         @Nullable WritableMap params) {
+                         WritableMap params) {
     reactContext.getJSModule(DeviceEventManagerModule.RCTDeviceEventEmitter.class).emit(eventName, params);
   }
 
